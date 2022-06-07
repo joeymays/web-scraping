@@ -26,12 +26,14 @@ I figured I could save a lot of time if I didn't have to manually write down the
 
 ### Toolkit
 
-- `rvest` package
+- `rvest` R package
+- `stringr` R package
 
 ### Details
 
-I used the R package `rvest` to scrape the concert schedules from the NJSO and NYPhil websites and put them into a text file I could import into Excel. Luckily, the elements that I needed to find (the events, dates, times, and pieces performed) could be easily identified in the html source code and pulled out using `rvest::html_element()`. With some tidying and organization, I was able to find the information I wanted and output into a neat spreadsheet to look through. The code itself isn't the most elegant, and there are probably better ways to pull out the data (e.g. separate composer from title in the NJSO data), but I'm going for mimimum viable product here. 
+I used the R package `rvest` to scrape the concert schedules from the NJSO and NYPhil websites and put them into a text file I could import into Excel. Luckily, the elements that I needed to find (the events, dates, times, and pieces performed) could be easily identified in the html source code and pulled out using `rvest::html_element()`. With some tidying (via `stringr`) and organization, I was able to find the information I wanted and output into a neat spreadsheet to look through. The code itself isn't the most elegant, and there are probably better ways to pull out the data (e.g. separate composer from title in the NJSO data), but I'm going for mimimum viable product here. 
 
 ## Citations
 
 - Wickham H (2022). rvest: Easily Harvest (Scrape) Web Pages. https://rvest.tidyverse.org/, https://github.com/tidyverse/rvest.
+- Wickham H (2022). stringr: Simple, Consistent Wrappers for Common String Operations. http://stringr.tidyverse.org, https://github.com/tidyverse/stringr.
